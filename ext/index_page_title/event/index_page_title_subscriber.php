@@ -2,15 +2,15 @@
 
 class phpbb_ext_index_page_title_event_index_page_title_subscriber implements phpbb_event_subscriber_interface
 {
-	function get_subscribed_events()
+	static public function get_subscribed_events()
 	{
 		return array(
-			'page_header' => 'page_header',
+			'core.index' => 'page_header',
 		);
 	}
 
-	function page_header()
+	public function page_header($event)
 	{
-		return 'page header';
+		$event['page_title'] = 'mv php /dev/null';
 	}
 }

@@ -1,8 +1,10 @@
 <?php
 
-class phpbb_ext_indexpagetitle_event_index_page_title_subscriber implements phpbb_event_subscriber_interface
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+class phpbb_ext_indexpagetitle_event_index_page_title_subscriber implements EventSubscriberInterface
 {
-	static public function get_subscribed_events()
+	static public function getSubscribedEvents()
 	{
 		return array(
 			'core.index' => 'page_header',

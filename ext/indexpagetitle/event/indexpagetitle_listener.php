@@ -2,7 +2,7 @@
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-class phpbb_ext_indexpagetitle_event_index_page_title_subscriber implements EventSubscriberInterface
+class phpbb_ext_indexpagetitle_event_indexpagetitle_listener implements EventSubscriberInterface
 {
 	static public function getSubscribedEvents()
 	{
